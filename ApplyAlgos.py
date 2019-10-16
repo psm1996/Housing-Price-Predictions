@@ -37,6 +37,8 @@ print('score is', score)
 print('time required to train by LassoRegression is ',round(time()-t0,2))
 print('='*40)
 
+#All these things are not important main thing is to apply first data cleaning process and analysing features using various methods and plots.
+
 #Applying Ridge Regression with tuning parameters
 t0=time()
 from sklearn.linear_model import Ridge
@@ -65,6 +67,8 @@ train_df=pd.read_csv('train_dataset.csv')
 test_df=pd.read_csv('test_dataset.csv')
 train_df.drop(['Garden','House ID','renovation'],axis=1,inplace=True)
 test_df.drop(['Golden Grains','Garden','House ID','renovation'],axis=1,inplace=True)
+
+#xgboost is an ensembler. It is much better than adaboost due to it's parallel processing.
 
 X_train = train_df.drop("Golden Grains", axis=1)
 Y_train = train_df["Golden Grains"]
