@@ -15,6 +15,10 @@ test_df.drop(['Golden Grains','Garden','House ID','renovation'],axis=1,inplace=T
 X_train = train_df.drop("Golden Grains", axis=1)
 Y_train = train_df["Golden Grains"]
 
+# Applying random algo is not machine learning
+# We have to understaqnd why to apply these machine learning algo
+
+
 #Applyinng Linear Regression with cross validation
 from time import time
 t0=time()
